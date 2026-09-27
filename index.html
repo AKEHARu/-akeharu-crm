@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1769e0">
+  <title>AKEHARu CRM</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1d2733;
+    }
+
+    header {
+      background: #1769e0;
+      color: white;
+      padding: calc(18px + env(safe-area-inset-top)) 20px 18px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      opacity: .85;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 18px;
+      padding-bottom: 100px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #d8e0ea;
+      border-radius: 12px;
+      font-size: 16px;
+      background: white;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,.06);
+    }
+
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 4px 0;
+      color: #687483;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: #e7f1ff;
+      color: #1769e0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .menu button {
+      border: 0;
+      background: white;
+      border-radius: 15px;
+      padding: 20px 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,.06);
+      font-size: 15px;
+      font-weight: 600;
+      color: #253246;
+    }
+
+    .menu .icon {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .add {
+      position: fixed;
+      right: 22px;
+      bottom: calc(80px + env(safe-area-inset-bottom));
+      width: 58px;
+      height: 58px;
+      border: none;
+      border-radius: 50%;
+      background: #1769e0;
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 5px 20px rgba(23,105,224,.35);
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: calc(65px + env(safe-area-inset-bottom));
+      padding-bottom: env(safe-area-inset-bottom);
+      background: white;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    nav button {
+      border: 0;
+      background: transparent;
+      font-size: 12px;
+      color: #66717e;
+    }
+
+    nav span {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>AKEHARu CRM</h1>
+  <p>エアコン顧客・修理管理システム</p>
+</header>
+
+<div class="container">
+
+  <input
+    class="search"
+    type="search"
+    placeholder="顧客名・電話番号・住所・型番を検索"
+  >
+
+  <div class="menu">
+
+    <button>
+      <span class="icon">👤</span>
+      顧客
+    </button>
+
+    <button>
+      <span class="icon">📅</span>
+      訪問予定
+    </button>
+
+    <button>
+      <span class="icon">🔧</span>
+      修理履歴
+    </button>
+
+    <button>
+      <span class="icon">🗺️</span>
+      顧客MAP
+    </button>
+
+    <button>
+      <span class="icon">🧾</span>
+      見積・請求
+    </button>
+
+    <button>
+      <span class="icon">📊</span>
+      売上管理
+    </button>
+
+  </div>
+
+  <h3>最近の顧客</h3>
+
+  <div class="card">
+    <h2>顧客情報</h2>
+    <p>住所：―</p>
+    <p>電話番号：―</p>
+    <p>エアコン：―</p>
+    <span class="status">登録待ち</span>
+  </div>
+
+  <div class="card">
+    <h2>本日の訪問予定</h2>
+    <p>現在、登録されている予定はありません。</p>
+  </div>
+
+</div>
+
+<button class="add" onclick="alert('次の工程で顧客登録機能を接続します')">
+  ＋
+</button>
+
+<nav>
+  <button>
+    <span>🏠</span>
+    ホーム
+  </button>
+
+  <button>
+    <span>👥</span>
+    顧客
+  </button>
+
+  <button>
+    <span>📅</span>
+    予定
+  </button>
+
+  <button>
+    <span>🗺️</span>
+    MAP
+  </button>
+
+  <button>
+    <span>⚙️</span>
+    設定
+  </button>
+</nav>
+
+</body>
+</html>
