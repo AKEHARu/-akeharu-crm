@@ -215,7 +215,7 @@
 
 </div>
 
-<button class="add" onclick="alert('次の工程で顧客登録機能を接続します')">
+<button class="add" 
   ＋
 </button>
 
@@ -246,5 +246,10 @@
   </button>
 </nav>
 
+<script>
+document.querySelector('.add').onclick = function() {
+  alert('顧客登録画面をこれから作成します');
+};
+</script>
 </body>
 </html>
