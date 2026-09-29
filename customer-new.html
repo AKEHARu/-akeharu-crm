@@ -252,7 +252,7 @@ const { data, error } = await supabaseClient
     address: address || null,
     notes: memo || null
   })
-  .select();
+  
 
 if (error) {
   console.error(error);
